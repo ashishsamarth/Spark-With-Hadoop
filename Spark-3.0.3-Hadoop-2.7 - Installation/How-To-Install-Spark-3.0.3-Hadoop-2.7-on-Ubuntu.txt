@@ -107,3 +107,13 @@
         sudo firewall-cmd --reload
 
 21. Now, its time to start the slave, by executing the following command
+    Their are two ways to start the slave or worker, the default command is
+        start-slave.sh spark://ubuntu:7077
+
+    The challenge with this approach is, it will use available 'cores' and 'RAM' available on the machine to do its processing
+    Hence, starting a slave / worker with limited number of 'cores' and 'RAM' is a more optimal approach
+
+        start-slave.sh -c 1 -m 256M spark://ubuntu:7077
+
+
+        
