@@ -81,4 +81,29 @@
 18. Since I have firewalld, I went and disabled 'ufw' via the following command
         sudo systemctl stop ufw
         sudo systemctl disable ufw
+
+19. Now, its time to start the standalone master of Spark, by executing the following command
+        start-master.sh
+
+20. The logs for start up of master are present at the following location
+        /opt/spark/logs
+
+        If the master started successfully, it will have a line printed as the following
+            Successfully started service 'MasterUI' on port 8080.
         
+        You can access the web-ui for spark with the following address, but you need to ensure, firewall is not blocking 8081
+            http://your-machine-ip:8080
+
+21. To check, what all ports are allowed for traffice, execute the following command
+        sudo firewall-cmd --list-all | grep -i '^  ports'
+
+        If none of the ports are opened, the output will look like the following
+
+        Output:
+            ports: 
+
+22. To open the port 8080, execute the following commands
+        sudo firewall-cmd --permanent --add-port=8080/tcp
+        sudo firewall-cmd --reload
+
+21. Now, its time to start the slave, by executing the following command
