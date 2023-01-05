@@ -48,4 +48,32 @@
 13. For the variables to take effect, source / execute the '.profile' under your home directory
         source ~/.profile
 
-14. 
+14. The default port for Spark is 8080, however if for whatever reason, this port is occupied, then spark will try to use 8081.
+
+15. I prefer, 'firewalld' instead of the default 'ufw' for firewall services on ubuntu. You can install firewalld, but executing the following command
+        sudo apt install firewalld
+    
+    You can verify the install, by executing the following command
+        dpkg -L firewalld
+    
+    You can check the version of the firewall, by executing the following command
+        sudo firewall-cmd --version
+
+16. Check the firewall service status by executing the following command
+        sudo systemctl status firewalld
+
+        Output:
+            devops@ubuntu:~$ systemctl status firewalld
+            ● firewalld.service - firewalld - dynamic firewall daemon
+                Loaded: loaded (/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
+                Active: active (running) since Thu 2023-01-05 17:28:04 UTC; 47min ago
+                Docs: man:firewalld(1)
+                Main PID: 4128 (firewalld)
+                Tasks: 2 (limit: 18905)
+                Memory: 27.0M
+                CPU: 843ms
+                CGroup: /system.slice/firewalld.service
+                        └─4128 /usr/bin/python3 /usr/sbin/firewalld --nofork --nopid
+
+17. Enable the firewall service to start with system boot up
+        sudo systemctl enable firewalld
