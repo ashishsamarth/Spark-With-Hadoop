@@ -115,5 +115,4 @@
 
         start-slave.sh -c 1 -m 256M spark://ubuntu:7077
 
-
-        
+Screenshot of Spark GUI is in the same directory, to see how it looks with a Master and Slave started        
