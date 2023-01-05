@@ -77,3 +77,8 @@
 
 17. Enable the firewall service to start with system boot up
         sudo systemctl enable firewalld
+
+18. Since I have firewalld, I went and disabled 'ufw' via the following command
+        sudo systemctl stop ufw
+        sudo systemctl disable ufw
+        
