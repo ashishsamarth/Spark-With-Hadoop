@@ -21,4 +21,21 @@
 
 6.  If Java is not installed, execute the following to install it on Ubuntu
         sudo apt install default-jdk
-        
+
+7.  The current working directory is 'your home' directory on the Server
+        /home/devops/
+    Since you logged in, you have not changed in to another directory.
+
+8.  Execute the following to download the tarball from Apache Spark's website
+        wget https://archive.apache.org/dist/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
+
+9.  Once the tar ball is downloaded successfully, untar it, by executing the following command
+        tar xvf spark-3.0.3-bin-hadoop2.7.tgz
+
+10. Move the expanded tar ball to /opt/, by executing the following command
+        sudo mv ~/spark-3.0.3-bin-hadoop2.7/ /opt/
+
+11. Rename the 'spark-3.0.3-bin-hadoop2.7' directory to 'spark' under /opt/, by executing following command
+        sudo mv /opt/spark-3.0.3-bin-hadoop2.7 /opt/spark
+
+12. 
