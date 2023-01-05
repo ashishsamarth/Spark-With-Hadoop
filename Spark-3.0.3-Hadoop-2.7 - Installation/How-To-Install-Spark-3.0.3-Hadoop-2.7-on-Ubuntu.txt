@@ -1,0 +1,21 @@
+1.  Login to the machine as a non-super user
+
+2.  Ensure, your user is in the sodoers file, so that you can execute commands as sudo
+
+3.  Execute the following to update the system
+        sudo apt update
+
+4.  If you wish to upgrade the system, execute the following
+        sudo apt upgrade -y
+
+5.  Since Apache-Spark is a java based application, ensure you have JDK installed.
+    Execute the following to check, if java is already installed on the OS
+        java --version
+
+        Output:
+        devops@ubuntu:/$ java --version
+        openjdk 11.0.17 2022-10-18
+        OpenJDK Runtime Environment (build 11.0.17+8-post-Ubuntu-1ubuntu222.04)
+        OpenJDK 64-Bit Server VM (build 11.0.17+8-post-Ubuntu-1ubuntu222.04, mixed mode, sharing)
+        devops@ubuntu:/$
+
