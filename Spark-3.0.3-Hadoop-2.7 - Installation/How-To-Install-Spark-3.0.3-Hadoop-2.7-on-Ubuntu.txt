@@ -19,3 +19,6 @@
         OpenJDK 64-Bit Server VM (build 11.0.17+8-post-Ubuntu-1ubuntu222.04, mixed mode, sharing)
         devops@ubuntu:/$
 
+6.  If Java is not installed, execute the following to install it on Ubuntu
+        sudo apt install default-jdk
+        
