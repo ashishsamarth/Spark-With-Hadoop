@@ -1,0 +1,2 @@
+When working with Spark via PySpark, its important to build a spark content, when developing code on an IDE or local environment.
+This step of creating a Spark Context is not important in Databricks UI, since the context is already build in
