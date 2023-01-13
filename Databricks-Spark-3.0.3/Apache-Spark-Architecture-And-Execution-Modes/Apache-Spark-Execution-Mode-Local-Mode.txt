@@ -1,0 +1,3 @@
+In this mode of execution, the Driver and the Executor reside on the same machine.
+This is ideal for small-scale experimentation or if you dont want to work with Pandas for any reason.
+Any distributed processing is not available, since its Local mode.
